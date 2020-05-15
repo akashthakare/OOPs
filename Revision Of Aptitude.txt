@@ -1,0 +1,67 @@
+C/C++
+Integer i1=128;
+Integer i2=128;
+sop((i1==i2))//false
+whenever we assign a value beyond or above the 127 then new object is created ,so new references is created each time….so output is false in second case.
+The above case is happen only with ‘integer’ and ‘character’ data type.
+If we do that with float or double data type then each time new object is created, and new references is created.
+1. We can perform pre/post-increment with pointer when passing pointer as parameter in function.
+
+2.Normal casting: printf("%f",(float) *p);
+
+3.void pointer casting: printf("%f",*(int*)p);
+
+4.int a[]={1,2,3,4,5};
+int length=sizeof(a)/sizeof(a[0]);//5
+printf("%d",sizeof(a));//20
+
+5.*ptr=str[i];//for value OR ptr=&str[i];//for address
+
+6.ptr=str;by default point first location of char array str,so no need  ptr=&str;//error
+but consider : int x=10;int *p then we need p=&x
+
+7.static vs extern
+All functions are global(extern) by default in a C program/file. But, static keyword makes a function as a local function which can be accessed only by the program/file where it is declared and defined. Other programs/files can’t access these static functions.
+
+8.Value of NULL pointer is zero(0).
+
+9.Dynamic memeory allocation:malloc vs calloc
+->Number of parameter
+->memmory initialize
+->memory fails
+ p=(int*)malloc(sizeof(int));  // p=(int*)malloc(a *sizeof(int));
+If the space in memory allocated by malloc is not sufficient, then an allocation fails and return NULL
+we can create dynaic array using malloc
+
+10.  while(*ptr != '\0')// it is best way to print character of string upto ‘\0’ null character.
+
+11.we can not directly compare two strcture type variable.if(p == p1)//invalid but if(p.x == p1.x)//valid
+
+12.We can change the value of global inside the function (main also).
+
+
+
+C structure and C++ Structure
+preprocessor:
+1.do not need ; at end of MIRCRO
+#define LIMIT 5 
+#define AREA(l, b) (l * b) //work like function
+
+2.
+#include< file_name >//include standard/header file
+#include"filename"//include user defined file
+
+3.
+If the macro with name as ‘macroname‘ is defined then the block of statements will execute otherwise skip.
+#ifdef macro_name
+stmt 1;
+stmt 2;
+-
+-
+stmt n;	
+#endif
+
+Constructor in C++:
+Whenever we define one or more non-default constructors( with parameters ) for a class, a default constructor( without parameters ) should also be explicitly defined as the compiler will not provide a default constructor in this case.(same like Java)
+
+friend function not member of class.
